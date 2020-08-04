@@ -19,7 +19,3 @@ class Anagrams:
         striped_words = [line.strip().lower() for line in self.words]
         anagrams = sorted([a for a in set(["".join(perm) for perm in itertools.permutations(word)]) if a in striped_words])
         return anagrams
-
-all_words = Anagrams()
-agrams = all_words.get_anagrams("")
-print(agrams)
